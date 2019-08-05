@@ -17,9 +17,9 @@ Source code ini dibuat dengan bahasa Python 3.0 menggunakan Anaconda Jupyter
 
 Saya mempelajari source code tersebut dari https://machinelearningmastery.com/implement-backpropagation-algorithm-scratch-python/, kemudian menambah dan mengubah (melakukan modifikasi) dari beberapa source code tersebut sesuai kebutuhan.
 
-For further information, please contact me:
+For further information, please contact me by 
 Email: zahra.informatics@gmail.com or zahranabilaizdihar@gmail.com
-No HP: +6282229812365
+and No HP: +6282229812365
 
 
 Jika ingin sharing juga dapat menghubungi contact saya.
