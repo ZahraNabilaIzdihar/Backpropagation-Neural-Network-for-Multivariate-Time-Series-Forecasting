@@ -1,0 +1,79 @@
+from math import exp
+from sklearn.metrics import mean_squared_error
+from sklearn.metrics import accuracy_score 
+from math import exp
+from random import seed
+from random import random
+import pandas as pd
+import numpy as np 
+import matplotlib.pyplot as plt
+from IPython.display import display
+from sklearn import preprocessing
+from sklearn.preprocessing import MinMaxScaler 
+from sklearn.metrics import mean_squared_error 
+from sklearn.metrics import accuracy_score
+
+# Initialize a network
+def initialize_network(n_inputs, n_hidden, n_outputs):
+	network = list()
+	hidden_layer = [{'weights':[random() for i in range(n_inputs + 1)]} for i in range(n_hidden)]
+	network.append(hidden_layer)
+	output_layer = [{'weights':[random() for i in range(n_hidden + 1)]} for i in range(n_outputs)]
+	network.append(output_layer)
+	return network
+
+
+# Calculate neuron activation for an input
+def activate(weights, inputs):
+	activation = weights[-1]
+	for i in range(len(weights)-1):
+		activation += weights[i] * inputs[i]
+	return activation
+
+# Transfer neuron activation
+def transfer(activation):
+	return 1.0 / (1.0 + exp(-activation))
+
+# Forward propagate input to a network output
+def forward_propagate(network, row):
+	inputs = row
+	for layer in network:
+		new_inputs = []
+		for neuron in layer:
+			activation = activate(neuron['weights'], inputs)
+			neuron['output'] = transfer(activation)
+			new_inputs.append(neuron['output'])
+		inputs = new_inputs
+	return inputs
+
+# Make a prediction with a network
+def predict(network, row):
+	outputs = forward_propagate(network, row)
+	return outputs.index(max(outputs))
+
+
+#PREDICTION RESULT
+
+data = pd.read_excel('session.xlsx', header=None, index_col=False, names=['x1','x2','y'])
+minmax_scaler = preprocessing.MinMaxScaler(feature_range=(0,1))
+data_minmax = minmax_scaler.fit_transform(data)
+
+n_inputs = len(data_minmax[0]) - 1
+n_outputs = len(set([row[-1] for row in data_minmax]))
+network = initialize_network(n_inputs, 4, n_outputs)
+#train_network(network, data_minmax, 0.9, 10000, n_outputs)
+#for layer in network:
+#	print(layer)
+for row in data_minmax:
+	prediction = predict(network, row)
+output = forward_propagate(network, row)
+#print(output)
+
+target=pd.read_excel('targetsession.xlsx', header=None, index_col=False, names=['y'])
+minmax_scaler = preprocessing.MinMaxScaler(feature_range=(0,1))
+actual = minmax_scaler.fit_transform(target)
+
+#HITUNG Forecast Errors
+forecast_errors = [actual[i]-output[i] for i in range(len(actual))]
+print('Forecast Errors: %s' % forecast_errors)
+
