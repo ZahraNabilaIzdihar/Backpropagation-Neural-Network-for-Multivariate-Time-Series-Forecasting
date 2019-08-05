@@ -1,5 +1,5 @@
 # Backpropagation-Neural-Network-for-Multivariate-Time-Series-Forecasting
-Backpropagation Neural Network for Multivariate Time Series Forecasting (multi input single output: 2 inputs and 1 output)
+This is project for Backpropagation Neural Network for Multivariate Time Series Forecasting (multi input single output: 2 inputs and 1 output)
 
 Ada beberapa tahap dalam peramalan time series multivariate menggunakan Backpropragation Neural Network. Berikut adalah langkah-langkah yang dilakukan:
 1. Min Max Normalization (pre-processing)
