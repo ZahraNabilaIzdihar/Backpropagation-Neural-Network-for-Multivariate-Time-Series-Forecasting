@@ -21,9 +21,6 @@ For further information, please contact me by
 
 Email: zahra.informatics@gmail.com or zahranabilaizdihar@gmail.com
 
-and No HP: +6282229812365
-
-
 Jika ingin sharing juga dapat menghubungi contact saya.
 
 Thank you.
