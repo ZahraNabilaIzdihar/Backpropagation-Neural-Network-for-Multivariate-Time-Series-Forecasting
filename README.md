@@ -6,7 +6,7 @@ Ada beberapa tahap dalam peramalan time series multivariate menggunakan Backprop
 2. Initialize Network (Inisialisasi Bobot)
 3. Feed Forward Propagation
 4. Backpropagation
-5. Train (with execution time)
+5. Train (use execution time)
 6. Predict
 7. Forecast Result
 8. Forecast Errors
@@ -20,5 +20,7 @@ Jika ingin sharing juga dapat menghubungi contact saya.
 
 Thank you.
 
+
 Regards,
+
 Zahra
