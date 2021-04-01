@@ -14,13 +14,10 @@ Ada beberapa tahap dalam peramalan time series multivariate menggunakan Backprop
 
 Source code ini dibuat dengan bahasa Python 3.0 menggunakan Anaconda Jupyter.
 
-For further information, feel free to contact me by Email: zahranabilaizdihar@gmail.com or zahra.informatika@gmail.com.
-
-Jika ingin sharing juga dapat menghubungi contact saya.
+For any suggestions and discussion, please reach out to my Linkedin or  email (only): 
+zahra.informatika@gmail.com.
 
 Thank you.
 
-
 Regards,
-
 Zahra
